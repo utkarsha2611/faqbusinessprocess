@@ -33,7 +33,7 @@ server.post('/api/messages', connector.listen());
 });*/
 
 // connecting with LUIS
-var luisRecognizer = new builder.LuisRecognizer('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/b51de4d2-2a91-49f1-8436-8a1de6d469d7?subscription-key=7c029b229e924655a57eb8afe6dc990a&staging=true&timezoneOffset=0&verbose=true&q=');
+var luisRecognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
 var intentDialog = new builder.IntentDialog({ recognizers: [luisRecognizer] });
 bot.dialog('/', intentDialog);
 
