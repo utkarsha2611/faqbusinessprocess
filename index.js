@@ -38,7 +38,7 @@ var luisRecognizer = new builder.LuisRecognizer('https://westus.api.cognitive.mi
 var intentDialog = new builder.IntentDialog({ recognizers: [luisRecognizer] });
 bot.dialog('/', intentDialog);
 
-intentDialog.matches(/\b(hi|hello|hey|howdy|what's up)\b/i, '/sayHi') //Check for greetings using regex
+intentDialog.matches(/\b(hi|hello|hey|howdy|what's up|anyone there|wassup)\b/i, '/sayHi') //Check for greetings using regex
     .matches('Print', '/print') //Check for LUIS intent to get definition
     .matches('DefineMyPayslip', '/define') //Check for LUIS intent to get definition
     .matches('WhyIntroduced', '/reason') //Check for LUIS intent to answer why it was introduced
