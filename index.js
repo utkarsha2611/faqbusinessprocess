@@ -102,7 +102,7 @@ bot.dialog('/topNews', [
         }
         else {
             // The user choses to quit
-            session.endDialog("Ok. Mission Aborted.");
+            session.endDialog("Thanks for your time. Have a nice day!");
         }
 
     }
