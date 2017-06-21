@@ -63,10 +63,10 @@ intentDialog.matches(/\b(hi|hello|hey|howdy|what's up|anyone there|wassup|yo)\b/
     .matches('ExpiredSession', '/inactive') //Check for LUIS intent to answer how it affects 
     .matches('CannotAccess', '/cannot') //Check for LUIS intent to answer how it affects
     .matches('SupportedDevices', '/support') //Check for LUIS intent to answer how it affects 
-    .matches('GetNews', '/topNews') //Check for LUIS intent to get news
+   // .matches('GetNews', '/topNews') //Check for LUIS intent to get news
     .onDefault(builder.DialogAction.send("Oops! Can't answer that one. However, in addition to Payroll details, I can still get you some News!")); //Default message if all checks fail
 
-bot.dialog('/topNews', [
+/*bot.dialog('/topNews', [
     function (session) {
         // Ask the user which category they would like
         // Choices are separated by |
@@ -138,7 +138,7 @@ function sendTopNews(session, results, body) {
         .attachmentLayout(builder.AttachmentLayout.carousel)
         .attachments(cards);
     session.send(msg);
-}
+}*/
 
 
 bot.dialog('/sayHi', function (session) {
